@@ -7,9 +7,9 @@ In this tutorial, I will show you how to create a Docker image and use it to dep
 ## Directory Structure
 
 ```console
-myapp/
+app/
     Dockerfile
-    myapp
+    app
 src/
     CMakeList.txt
     main.cpp
@@ -74,7 +74,7 @@ To build the docker image, type the following into the terminal:
 
 ```console
 cd myapp
-docker build --tag myapp .
+docker build --tag drfknoble/01gettingstarted:latest .
 ```
 
 Afterwards, something similar to the following will be displayed:
@@ -93,7 +93,7 @@ What's Next?
 To run the docker container, type the following into the terminal:
 
 ```console
-docker run myapp
+docker run drfknoble/01gettingstarted:latest
 ```
 
 Afterwards, something similar to the following will be displayed:
