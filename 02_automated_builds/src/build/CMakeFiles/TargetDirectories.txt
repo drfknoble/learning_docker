@@ -1,0 +1,3 @@
+/workspaces/learning_docker/02_automated_builds/src/build/CMakeFiles/edit_cache.dir
+/workspaces/learning_docker/02_automated_builds/src/build/CMakeFiles/rebuild_cache.dir
+/workspaces/learning_docker/02_automated_builds/src/build/CMakeFiles/automated_myapp.dir
