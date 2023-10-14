@@ -1,8 +1,8 @@
-# 03_esp32
+# 04_stm32
 
 ## Introduction
 
-In this tutorial, I will show you how to use a Docker Dev Container to develop a program for an ESP32.
+In this tutorial, I will show you how to use a Docker Dev Container to develop a program for an STM32.
 
 See here for documentation on how to use PlatformIO in a Docker container and via the command line: https://docs.platformio.org/en/stable/core/index.html. 
 
@@ -29,7 +29,7 @@ Once the virtual environment is activated, the PlatformIO CLI commands can be us
 Type the following into a terminal to get a list of available boards:
 
 ```console
-pio boards esp32
+pio boards stm32
 ```
 
 Afterwards, a list of available boards will be displayed.
@@ -39,7 +39,7 @@ Afterwards, a list of available boards will be displayed.
 Type the following into a terminal to create a new project in the current directory:
 
 ```console
-pio project init --board esp32dev
+pio project init --board stm32f446re
 ```
 
 Afterwards, a new PlatformIO project will be created. Required build tools will be automatically downloaded.
@@ -49,10 +49,10 @@ Afterwards, a new PlatformIO project will be created. Required build tools will 
 Type the following into the terminal to install the appropriate platforms for the board:
 
 ```console
-pio pkg install --platform atmelavr --platform espressif32 --platform ststm32
+pio pkg install --platform ststm32
 ```
 
-Afterwards, the platforms for the ESP32 will be installed. Required build tools will be automatically downloaded.
+Afterwards, the platforms for the STM32 will be installed. Required build tools will be automatically downloaded.
 
 ## Add a source file
 
@@ -90,12 +90,11 @@ Afterwards, something similar to the following will be displayed:
 ```console
 ...
 Building in release mode
-Retrieving maximum program size .pio/build/esp32dev/firmware.elf
-Checking size .pio/build/esp32dev/firmware.elf
+Checking size .pio/build/nucleo_f446re/firmware.elf
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
-RAM:   [=         ]   6.4% (used 21068 bytes from 327680 bytes)
-Flash: [==        ]  17.7% (used 232577 bytes from 1310720 bytes)
-============================== [SUCCESS] Took 71.17 seconds=============================
+RAM:   [          ]   0.9% (used 1124 bytes from 131072 bytes)
+Flash: [          ]   1.8% (used 9656 bytes from 524288 bytes)
+========================== [SUCCESS] Took 122.88 seconds ==========================
 ```
 
 ## Discussion
